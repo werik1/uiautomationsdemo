@@ -1,24 +1,34 @@
-# UI Test Automation Framework 
-UI test automation framework that utilizes Selenium WebDriver and TestNG.  This framework enables rapid test script creation with a selenium wrapper class that removes the need of writing low-level automation code.  It also generates a beautiful HTML-based test execution report after test executions.
+# Erik's UI Test Automation Framework 
+Production-ready UI test automation framework that utilizes Selenium WebDriver and TestNG.  This framework enables rapid test script creation with a Selenium wrapper class that removes the need of writing low-level automation code.  It also generates a beautiful HTML-based test execution report after test executions. 
 
-***I would love to show you the framework in detail. Please contact me for a demo.***
+**I would love to show you this framework in detail. Please contact me for a demo: iltikinw@gmail.com**
 
-## Project Dependencies
-This projects depends on the following external libraries:
-* **selenium-java**: browser automation code
-* **webdrivermanager**: managing driver binaries through code
-* **testng**: creating and managing test cases
-* **extentreport**: generating HTML based test execution reports
-* **javafaker**: generating randomized test data on the fly
+
 
 ## Pre-requisites
+
 The execution environment must have the following tools installed locally
+
 > * Download and install Chrome or Firefox browser
 > * Download and install **[JDK v1.8+](https://www.oracle.com/java/techologies/downloads/)**
 > * Download and install **[Apache Maven v3.0+](https://maven.apache.org/download.cgi)**
 > * Download and install **[Git v2.0+](https://git-scm.com/downloads)**
 
+
+
+## Project Dependencies
+
+This projects depends on the following external libraries:
+* **selenium-java**: for browser automation through Java code.
+* **webdrivermanager**: for managing WebDriver binaries through Java code
+* **testng**: for creating and managing test cases.
+* **extentreport**: for generating HTML-based test execution reports.
+* **javafaker**: for generating randomized test data on the fly.
+
+
+
 ## Framework Structures
+
 #### Project Structures
 ```text
 |- reports                # contains test report generated
@@ -34,10 +44,14 @@ The execution environment must have the following tools installed locally
 ```
 
 #### Internal Structures
-This is a diagram that details the internal structure of this framework.
+Below is a diagram detailing the internal structure of the framework.
+
 ![screenshot](/images/FrameworkStructure.jpg)
 
+
+
 ## How to Run Tests
+
 All the test triggering is conducted by **`mvn`** commands. This framework supports test execution by multiple different browsers.
 
 #### Supported Browsers:
@@ -48,7 +62,7 @@ All the test triggering is conducted by **`mvn`** commands. This framework suppo
 | Mozilla Firefox | `-Dbrowser=firefox`  |
 | Microsoft Edge  | `-Dbrowser=edge`     |
 
-## Execution Triggers
+#### Execution Triggers
 This framework supports various test triggers. This is to make CI/CD integration much simpler as the test execution details can be configurable at the command line.
 
 To trigger all text executions:
@@ -75,13 +89,17 @@ mvn test -Dbrowser=chrome -Denv=staging
 mvn test -Dgroups=smoke -Dbrowser=chrome -Denv=staging
 ```
 
+
+
 ## How to view the report
 All test execution reports are available as an HTML report in the 'reports' folder.
 ```test
 |- reports
     |- Index.html
 ```
-##### Sample Report:
+
+
+**Sample Report:**
 Please navigate to this folder to view the test execution result. A sample ExtentReport will look like the following, with more test cases. [Reference](https://www.extentreports.com/docs/v5/wiki/spark/spark.html#)
 
 ![screenshot](/images/extentreportscreenshot.png)
